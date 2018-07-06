@@ -1,0 +1,6 @@
+com/gaiaworks/controller/HystricErrorCallback.class
+com/gaiaworks/Feign_Application.class
+com/gaiaworks/service/FeignService.class
+com/gaiaworks/controller/FeignController.class
+com/gaiaworks/service/HystricService.class
+com/gaiaworks/controller/HystricController.class
