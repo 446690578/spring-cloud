@@ -7,4 +7,6 @@ server:
 spring:
   application:
     name: server1
-
+hystrix:
+  metrics:
+    polling-interval-ms: 2000

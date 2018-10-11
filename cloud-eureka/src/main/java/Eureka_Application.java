@@ -7,10 +7,10 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableEurekaServer
 @SpringBootApplication
 @ComponentScan(basePackages = "com.gaiaworks")
-public class Enreka_Application {
+public class Eureka_Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Enreka_Application.class,args);
+        SpringApplication.run(Eureka_Application.class,args);
     }
 
 }

@@ -12,12 +12,12 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    enable-self-preservation: false #关闭自我保护，不关进入保护模式不会剔除挂掉的微服务
+    enable-self-preservation: true #关闭自我保护，不关进入保护模式不会剔除挂掉的微服务
+#    renewal-percent-threshold: 0.50
 #security: # 密码验证
 #  basic:
 #    enabled: true
 #  user:
 #    name: admin
 #    password: 123
-
 
