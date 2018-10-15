@@ -1,17 +1,17 @@
-package com.gaiaworks;
+package com.ben;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @SpringBootApplication
+@EnableFeignClients
 @EnableDiscoveryClient
-public class RibbonApplication {
+public class Feign_Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(RibbonApplication.class,args);
+        SpringApplication.run(Feign_Application.class,args);
     }
-
-
 
 }

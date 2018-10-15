@@ -1,6 +1,6 @@
-package com.gaiaworks.controller;
+package com.ben.controller;
 
-import com.gaiaworks.service.FeignService;
+import com.ben.service.FeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

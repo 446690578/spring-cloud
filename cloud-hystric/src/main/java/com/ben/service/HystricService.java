@@ -1,6 +1,6 @@
-package com.gaiaworks.service;
+package com.ben.service;
 
-import com.gaiaworks.controller.HystricErrorCallback;
+import com.ben.controller.HystricErrorCallback;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

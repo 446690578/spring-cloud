@@ -1,4 +1,4 @@
-package com.gaiaworks;
+package com.ben;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;

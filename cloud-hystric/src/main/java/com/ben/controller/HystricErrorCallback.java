@@ -1,6 +1,6 @@
-package com.gaiaworks.controller;
+package com.ben.controller;
 
-import com.gaiaworks.service.HystricService;
+import com.ben.service.HystricService;
 import org.springframework.stereotype.Component;
 
 
