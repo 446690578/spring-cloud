@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableDiscoveryClient
 @RestController
-@EnableCircuitBreaker  //8762
+@EnableCircuitBreaker  //开启断路器
 public class sever1Application {
-
+    //端口为8762
     public static void main(String[] args) {
         SpringApplication.run(sever1Application.class,args);
     }
@@ -36,12 +36,13 @@ public class sever1Application {
 
 
     @GetMapping("/hi")
-    @HystrixCommand(fallbackMethod = "hiManError")
+    @HystrixCommand(fallbackMethod = "hiManError")//fallbackMethod方法必须要与原方法参数相同，否则会报错
     public String hiMan(@RequestParam(value = "name",required = false,defaultValue = "yuan")
                                String name) {
         Integer  a = 1/0;
         return "hi "+name+",i am server1 from port:" +port;
     }
+
 
     public String hiManError(String name){
         return "error message" + name;
