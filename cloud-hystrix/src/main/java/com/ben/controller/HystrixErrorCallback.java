@@ -10,6 +10,6 @@ public class HystrixErrorCallback implements HystrixService {
 
     @Override
     public String sayHiFromClientOne(String name) {
-        return "error  " + name;
+        return "hystrix:  " + name;
     }
 }

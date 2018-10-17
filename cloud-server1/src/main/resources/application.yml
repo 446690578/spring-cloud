@@ -10,3 +10,10 @@ spring:
 hystrix:
   metrics:
     polling-interval-ms: 2000
+
+
+
+
+
+
+

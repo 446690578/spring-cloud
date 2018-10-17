@@ -6,5 +6,5 @@ server:
   port: 8763
 spring:
   application:
-    name: server1
+    name: server2
 
