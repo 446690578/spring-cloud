@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/cloud-hystric.iml" filepath="$PROJECT_DIR$/cloud-hystric.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-hystrix.iml" filepath="$PROJECT_DIR$/cloud-hystrix.iml" />
     </modules>
   </component>
 </project>
