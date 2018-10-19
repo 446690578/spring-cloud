@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+#        git地址
+          uri: https://github.com/446690578/spring-cloud
+#        git上面配置文件所在的文件夹
+          search-paths: folderBen
+#        git帐户或密码 git私库才需要配置
+#          username: 446690478@qq.com
+#          password: yuanym2018
+      label: master
+server:
+  port: 8770
+
+
+
+
+
+
