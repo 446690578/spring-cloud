@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableEurekaClient
 @RestController
 @EnableCircuitBreaker  //8763
-public class sever1Application {
+public class Sever2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(sever1Application.class,args);
+        SpringApplication.run(Sever2Application.class,args);
     }
     @Value("${server.port}")
     String port;

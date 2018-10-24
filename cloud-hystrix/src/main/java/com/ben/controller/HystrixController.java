@@ -25,5 +25,11 @@ public class HystrixController {
         return  helloService.sayHi(name);
     }
 
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+    public String sayHello(@RequestParam(name="name" ,defaultValue = "yuan" ,required = false)
+                                String name){
+        return  helloService.sayHystric(name);
+    }
+
 
 }

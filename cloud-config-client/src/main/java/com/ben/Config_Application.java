@@ -14,3 +14,12 @@ public class Config_Application {
     }
 
 }
+/*
+* @Author: Ben.Yuan
+* @Description:
+* @param  端口  8771
+* @Date: 上午11:41 2018/10/23 
+*/
+
+
+// bootstrap.yml优先于application.yml加载，且不会被本地配置文件覆盖

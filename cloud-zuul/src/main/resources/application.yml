@@ -15,5 +15,6 @@ zuul:
     api-b:
       path: /api-b/**
 #      serviceId: cloud-feign
+#过滤可添加serviceId或者URL
       url: http://114.55.105.65:8086
 
