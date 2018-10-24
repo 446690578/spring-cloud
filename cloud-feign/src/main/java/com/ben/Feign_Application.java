@@ -5,6 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
+
+/*
+* @Author: Ben.Yuan
+* @Description:             端口  8765
+* @Date: 上午11:32 2018/10/24
+*/
+
 @SpringBootApplication
 @EnableFeignClients
 @EnableDiscoveryClient

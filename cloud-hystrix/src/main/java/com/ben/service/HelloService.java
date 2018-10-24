@@ -4,7 +4,7 @@ public interface HelloService {
 
     /*
     * @Author: Ben.Yuan
-    * @Description:
+    * @Description: 测试
     * @Date: 下午6:13 2018/10/23
     */
     public String sayHi(String name);

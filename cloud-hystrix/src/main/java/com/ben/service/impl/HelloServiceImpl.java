@@ -2,6 +2,7 @@ package com.ben.service.impl;
 
 import com.ben.service.HelloService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
@@ -12,18 +13,15 @@ public class HelloServiceImpl implements HelloService {
 
     private Integer count = 1;
 
-    @Bean
-    @LoadBalanced
-    RestTemplate restTemplate(){
-        return new RestTemplate();
-    }
-
+    @Autowired
     private RestTemplate restTemplate;
 
     @Override
     public String sayHi(String name) {
 
-        String result = restTemplate.getForObject("http://114.55.105.65:8086/v9/showNewConfig?code=8seconds&language=ZH-CN",String.class);
+        String result = restTemplate.getForObject("http://cloudServe/hi?name="+name,String.class);
+//        下面访问不通，因为注册中心没有该服务
+//        String result = restTemplate.getForObject("http://114.55.105.65:8086/v9/showNewConfig?code=8seconds&language=ZH-CN"+name,String.class);
         return "这是一个正常请求的结果 :" + result ;
 
 
@@ -43,7 +41,7 @@ public class HelloServiceImpl implements HelloService {
 
     public String sayHystricError(String name) {
 
-        return "断路器发生作用了 :" + name;
+        return "@HystrixCommand断路器发生作用了 :" + name;
 
 
     }
