@@ -1,19 +1,8 @@
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-server:
-  port: 8762
 spring:
-  application:
-    name: server1
-hystrix:
-  metrics:
-    polling-interval-ms: 2000
-
-
-
-
-
-
-
+  profiles:
+    active: dev
+mybatis:
+  mapper-locations: classpath:mapper/**.xml
+logging:
+  level:
+    com.ben.mapper: debug
