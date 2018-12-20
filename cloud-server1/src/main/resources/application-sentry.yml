@@ -1,0 +1,39 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    enabled: false
+#    eureka.client.enabled:false 关闭注册，独立本项目
+server:
+  port: 8762
+spring:
+  application:
+    name: server1
+  datasource: #数据库连接池配置
+    druid:
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/db1?useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: root
+      password: root
+      initial-size: 5
+      max-active: 20
+      min-idle: 5
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+
+hystrix:
+  metrics:
+    polling-interval-ms: 2000
+
+
+environment: benEnvironment
+stacktrace:
+  app:
+    packages: com.ben
+
+
+
+
+
+

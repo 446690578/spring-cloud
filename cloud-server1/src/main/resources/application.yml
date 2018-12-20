@@ -1,8 +1,9 @@
 spring:
   profiles:
-    active: dev
+    active: sentry
 mybatis:
   mapper-locations: classpath:mapper/**.xml
+# 打印sql语句
 logging:
   level:
-    com.ben.mapper: debug
+    com.ben.mapper: error

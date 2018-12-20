@@ -2,6 +2,7 @@ package com.ben;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
+import io.sentry.Sentry;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -25,6 +26,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class sever1Application {
     //端口为8762
     public static void main(String[] args) {
+//        Sentry.init("http://5dec3cccc51c48de855a71273f3fd876@101.132.186.125:9000//2");
+//        Sentry.init("http://6741f4ce1e5c4c6fb5e01fce6508e4b9@114.55.105.65:9000//2");
+        Sentry.init("http://5dec3cccc51c48de855a71273f3fd876@101.132.186.125:9000/2");
+
+
         SpringApplication.run(sever1Application.class,args);
     }
 
@@ -34,7 +40,11 @@ public class sever1Application {
     @GetMapping("/hello")
     public String home(@RequestParam(value = "name",required = false,defaultValue = "yuan")
                                    String name) {
-
+        try{
+            Integer  a = 1/0;
+        }catch (Exception e){
+            Sentry.capture(e);
+        }
         return "hi "+name+",i am server1 from port:" +port;
     }
 

@@ -42,7 +42,7 @@ public class TCController {
         }
 
         return "转账前："+"beginyuan:"+beginyuan+ "--"+"beginfang:" +beginfang + "----------"
-              +"转账后："+"endYuan" +endyuan+ "--"+ "endfang:" +endfang;
+                                                                                     +"转账后："+"endYuan" +endyuan+ "--"+ "endfang:" +endfang;
 
     }
 
