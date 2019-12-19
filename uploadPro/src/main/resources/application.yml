@@ -1,0 +1,10 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: cloud-zuul
+  servlet:
+    multipart:
+      max-file-size: 1024KB
+      max-request-size: 10240KB
+      location: /Users/benyuan/spring-cloud/uploadPro

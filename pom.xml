@@ -17,6 +17,7 @@
         <module>cloud-ribbon</module>
         <module>cloud-server1</module>
         <module>cloud-zuul</module>
+        <module>uploadPro</module>
     </modules>
 
 </project>
