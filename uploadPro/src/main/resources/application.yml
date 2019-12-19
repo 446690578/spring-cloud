@@ -5,6 +5,8 @@ spring:
     name: cloud-zuul
   servlet:
     multipart:
-      max-file-size: 1024KB
-      max-request-size: 10240KB
+      max-file-size: 10240KB
+      max-request-size: 40960KB
       location: /Users/benyuan/spring-cloud/uploadPro
+storage:
+  location: upload-dir

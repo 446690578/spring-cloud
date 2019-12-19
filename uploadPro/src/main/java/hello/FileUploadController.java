@@ -32,6 +32,7 @@ public class FileUploadController {
 		this.storageService = storageService;
 	}
 
+
 	@GetMapping("/")
 	public String listUploadedFiles(Model model) throws IOException {
 
@@ -43,6 +44,11 @@ public class FileUploadController {
 		return "uploadForm";
 	}
 
+	/**
+	*@Description: 文件下载
+	*@Author: ben.yuan
+	*@date: 2019-12-19 16:22
+	*/
 	@GetMapping("/files/{filename:.+}")
 	@ResponseBody
 	public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
@@ -52,6 +58,11 @@ public class FileUploadController {
 				"attachment; filename=\"" + file.getFilename() + "\"").body(file);
 	}
 
+	/**
+	*@Description: 文件上传
+	*@Author: ben.yuan
+	*@date: 2019-12-19 16:22
+	*/
 	@PostMapping("/")
 	public String handleFileUpload(@RequestParam("file") MultipartFile file,
 			RedirectAttributes redirectAttributes) {
