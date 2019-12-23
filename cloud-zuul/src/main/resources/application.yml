@@ -7,6 +7,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+    enabled: false
+
 
 zuul:
   routes:
@@ -17,5 +19,5 @@ zuul:
       path: /api-b/**
 #      serviceId: cloud-feign
 #过滤可添加serviceId或者URL
-      url: http://114.55.105.65:8086
+      url: http://192.168.0.84/farm_server/
 
