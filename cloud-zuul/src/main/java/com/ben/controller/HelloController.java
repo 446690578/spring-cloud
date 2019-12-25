@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 @RestController
 @RequestMapping("/test")
 public class HelloController {
@@ -14,8 +17,13 @@ public class HelloController {
 
     @GetMapping("/hello")
     public Object sayHello(){
-
-        return "hello " + appName;
+        InetAddress address = null;
+        try {
+            address = InetAddress.getLocalHost();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return "hello " + address.getHostAddress();
 
     }
 
